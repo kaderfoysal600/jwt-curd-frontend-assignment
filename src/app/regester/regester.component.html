@@ -1,0 +1,59 @@
+<div class="log">
+  <mat-card>
+    <mat-card-header>
+      <h1>User Registration</h1>
+    </mat-card-header>
+    <form
+      class="example-form"
+      [formGroup]="UserRegistrationForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <mat-form-field appearance="outline">
+        <mat-label>User Name</mat-label>
+        <input matInput formControlName="username" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Gender</mat-label>
+        <mat-select formControlName="gender">
+          <mat-option
+            *ngFor="let gender of genderValues"
+            [value]="gender.value"
+          >
+            {{ gender.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field color="accent" appearance="outline">
+        <mat-label>Date of Birth</mat-label>
+        <input matInput [matDatepicker]="picker2" formControlName="dob" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker2"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker2 color="primary"></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput formControlName="password" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Confirm Password</mat-label>
+        <input type="password" #confirmPassword matInput />
+      </mat-form-field>
+      <div class="example-button-row">
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+      </div>
+      <p>
+        Already have an account ?
+        <a routerLink="/login" mat-raised-button color="accent"
+          >Back to login</a
+        >
+      </p>
+    </form>
+  </mat-card>
+</div>

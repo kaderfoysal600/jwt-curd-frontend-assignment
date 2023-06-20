@@ -1,0 +1,28 @@
+.header-area {
+  background-color: #000;
+  color: #fff;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    width: 100%;
+  }
+  li > a {
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    &:hover {
+      background-color: gray;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "user": [
+    {
+      "id": "xsdfghgdfh",
+      "name": "dfgdfgdfg",
+      "password": "dfgdfgdfg",
+      "email": "kaderf113@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isActive": "false"
+    }
+  ]
+}

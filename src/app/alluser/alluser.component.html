@@ -1,0 +1,18 @@
+<div class="section-1">
+  <header>
+    <h1>All User</h1>
+  </header>
+  <h1 style="color: rgb(28, 28, 229)" *ngIf="dataUser.result.length === 0">
+    No User Added <span routerLink="/regestar" class="add-user">Add User</span>
+  </h1>
+  <section class="userinfo" *ngFor="let item of dataUser.result">
+    <p>Username : {{ item.username }}</p>
+    <div class="btn-group">
+      <button class="edit" (click)="openProjectControllerDialog(item)">
+        Edit
+      </button>
+      <button class="delete" (click)="deleteUser(item._id)">Delete</button>
+      <button class="add-user" routerLink="/regestar">Add User</button>
+    </div>
+  </section>
+</div>

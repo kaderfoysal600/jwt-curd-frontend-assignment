@@ -1,0 +1,51 @@
+.section-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+  p {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.userinfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  color: #fff;
+  padding: 7px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.edit {
+  background-color: rgb(14, 150, 14);
+}
+
+.delete {
+  background-color: rgb(222, 60, 60);
+}
+
+.add-user {
+  color: #fff;
+  padding: 7px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: purple;
+}

@@ -1,0 +1,36 @@
+<div class="reg">
+  <mat-card>
+    <mat-card-header>
+      <h1>User Login</h1>
+    </mat-card-header>
+    <form
+      class="example-form"
+      [formGroup]="UserLoginForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <div class="formfield">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput formControlName="password" />
+        </mat-form-field>
+      </div>
+      <p *ngIf="errorLogin" style="color: red">
+        The email or password you entarned didn't matches our record .Please
+        enter valid email and password
+      </p>
+      <div class="submit">
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+      </div>
+      <div class="back">
+        <p>Don't have an account?</p>
+        <a routerLink="/regestar" mat-raised-button color="accent"
+          >Go to Registration</a
+        >
+      </div>
+    </form>
+  </mat-card>
+</div>
